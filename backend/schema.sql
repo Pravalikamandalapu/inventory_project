@@ -1,0 +1,24 @@
+
+-- SQLite schema for products and inventory_logs
+CREATE TABLE IF NOT EXISTS products (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  name TEXT NOT NULL UNIQUE COLLATE NOCASE,
+  unit TEXT NOT NULL,
+  category TEXT NOT NULL,
+  brand TEXT,
+  stock INTEGER NOT NULL DEFAULT 0,
+  status TEXT NOT NULL,
+  image TEXT,
+  created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+  updated_at DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS inventory_logs (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  product_id INTEGER NOT NULL,
+  old_stock INTEGER NOT NULL,
+  new_stock INTEGER NOT NULL,
+  changed_by TEXT NOT NULL,
+  timestamp DATETIME DEFAULT CURRENT_TIMESTAMP,
+  FOREIGN KEY(product_id) REFERENCES products(id) ON DELETE CASCADE
+);

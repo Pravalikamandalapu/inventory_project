@@ -1,0 +1,16 @@
+body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+.app { padding: 16px; }
+.header { display:flex; justify-content:space-between; align-items:center; margin-bottom:12px; gap:12px; }
+.header .left { display:flex; gap:8px; align-items:center; }
+.header input { padding:6px; }
+.header select { padding:6px; }
+.header .right button { margin-left:8px; padding:6px 10px; }
+.product-table { width:100%; border-collapse:collapse; }
+.product-table th, .product-table td { border:1px solid #ddd; padding:8px; text-align:left; }
+.badge { padding:4px 8px; border-radius:4px; color:white; }
+.green { background:green; }
+.red { background:red; }
+.panel { position:fixed; right:0; top:0; height:100%; width:360px; background:#fff; box-shadow:-4px 0 8px rgba(0,0,0,0.1); padding:12px; overflow:auto; }
+.panel-header { display:flex; justify-content:space-between; align-items:center; }
+.history-table { width:100%; border-collapse:collapse; margin-top:12px; }
+.history-table th, .history-table td { border:1px solid #eee; padding:6px; }
