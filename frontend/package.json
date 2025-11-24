@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "node ./node_modules/vite/dist/node/cli.js build",
     "preview": "vite preview"
   },
   "dependencies": {
